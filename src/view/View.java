@@ -1,5 +1,8 @@
 package view;
 
+import java.util.Date;
+import java.util.Scanner;
+
 import db.EmployeeDB;
 import models.Employee;
 
@@ -15,13 +18,29 @@ public class View {
      */
     public void showAddEmployee() {
         //TODO: implement
+    	
+    	Employee e = new Employee();
+    	System.out.println("Please add the Employees credentials:");
+    	System.out.println("Name:");
+    	e.setPrename(scanner.nextLine());
+    	System.out.println("Surname:");
+    	e.setSurname(scanner.nextLine());
+    	System.out.println("Job Description");
+    	e.setJobDescription(scanner.nextLine());
+    	System.out.println("Birthdate:");
+    	e.setBirthdate(scanner.next());
+    	System.out.println("Salary:");
+    	e.setSalary(scanner.nextDouble());
+    	System.out.println("Employmentdate:");
+    	e.setEmploymentDate(scanner.next());
     }
 
     /**
      * Show the interface to edit a employee to the db
      */
-    public void showEditEmployee() {
+    public void showEditEmployee(String prename, String surname, String jobDescription, Date birthdate, double salary, Date emplyomentDate) {
         //TODO: implement
+    	
     }
 
     /**
@@ -29,6 +48,7 @@ public class View {
      */
     public void showListEmployees() {
         //TODO: implement
+    	for(Employee)
     }
 
     /**

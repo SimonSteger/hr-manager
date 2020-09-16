@@ -33,9 +33,13 @@ public class HRManager {
     }
 
     private static void selectMenu() {
-        //TODO: add error handling
-        int selectedMenuId = scanner.nextInt();
-        showMenu(selectedMenuId);
+        try {
+        	int selectedMenuId = scanner.nextInt();
+        	showMenu(selectedMenuId);
+        }
+        catch(Exception e) {
+        	e.printStackTrace();
+        }
     }
 
     private static void showMenu(int selectedMenuId) {

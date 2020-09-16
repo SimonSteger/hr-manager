@@ -1,11 +1,10 @@
 package db;
 
-import models.Employee;
-
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.Employee;
 import util.HRManagerUtil;
 
 public class EmployeeDB {
