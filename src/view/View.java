@@ -38,8 +38,15 @@ public class View {
     /**
      * Show the interface to edit a employee to the db
      */
-    public void showEditEmployee() {
+    public String showEditEmployee() {
         //TODO: implement
+    	
+    	EmployeeDB edb = new EmployeeDB();
+    	for(Employee e: edb.getEmployees()) {
+    		System.out.println("Id" + e.getId() + "Name: " + e.getPrename() + "Surname: " + e.getSurname() + "Jobdescription: " + e.getJobDescription() + "Birthdate: " + e.getBirthdate() + "Salary: " + e.getSalary() + "Employmentdate: " + e.getEmploymentDate());
+    	}
+    	System.out.println("Which employee do you want to edit? Enter his id and press enter.");
+    	return scanner.nextLine();
     	
     }
 
@@ -57,8 +64,14 @@ public class View {
     /**
      * Show the interface to delete a employee
      */
-    public void showDeleteEmployee() {
+    public String showDeleteEmployee() {
         //TODO: implement
+    	EmployeeDB edb = new EmployeeDB();
+    	for(Employee e: edb.getEmployees()) {
+    		System.out.println("Id" + e.getId() + "Name: " + e.getPrename() + "Surname: " + e.getSurname() + "Jobdescription: " + e.getJobDescription() + "Birthdate: " + e.getBirthdate() + "Salary: " + e.getSalary() + "Employmentdate: " + e.getEmploymentDate());
+    	}
+    	System.out.println("Which employee do you want to delete? Enter his id and press enter.");
+    	return scanner.nextLine();
     }
 
     /**
@@ -67,6 +80,7 @@ public class View {
      */
     private void showEmployee(Employee employee) {
         //TODO: implement
+    	System.out.println("Id" + employee.getId() + "Name: " + employee.getPrename() + "Surname: " + employee.getSurname() + "Jobdescription: " + employee.getJobDescription() + "Birthdate: " + employee.getBirthdate() + "Salary: " + employee.getSalary() + "Employmentdate: " + employee.getEmploymentDate());
     }
 
 }
