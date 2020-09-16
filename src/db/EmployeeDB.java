@@ -16,15 +16,35 @@ public class EmployeeDB {
     }
 
     public void addEmployee(Employee employee) {
-        //TODO: Implement
+    	try {
+    		employees.add(new Employee(employee.getPrename(), employee.getSurname(), employee.getJobDescription(), employee.getBirthdate(), employee.getSalary(), employee.getEmploymentDate()));
+    	}
+    	catch(Exception e) {
+    		System.out.println("Something went wrong adding an Employee. " + e.getMessage());    		
+    		System.exit(1);
+    	}
     }
 
-    public void deleteEmployee(Employee employee) {
-        //TODO: Implement
+    @SuppressWarnings("unlikely-arg-type")
+	public void deleteEmployee(Employee employee) {
+    	try {
+    		employees.remove(employee.getId());
+    	}
+    	catch(Exception e) {
+    		System.out.println("Something went wrong deleting your Employee. " + e.getMessage());
+    		System.exit(1);
+    	}
     }
 
     public void updateEmployee(Employee employee) {
         //TODO: Implement
+    	try {
+    		
+    	}
+    	catch(Exception e){
+    		System.out.println("Something went wrong updating your Employee. " + e.getMessage());
+    		System.exit(1);
+    	}
     }
 
     private void addMockData() {

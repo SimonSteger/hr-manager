@@ -38,7 +38,7 @@ public class View {
     /**
      * Show the interface to edit a employee to the db
      */
-    public void showEditEmployee(String prename, String surname, String jobDescription, Date birthdate, double salary, Date emplyomentDate) {
+    public void showEditEmployee() {
         //TODO: implement
     	
     }
@@ -48,7 +48,10 @@ public class View {
      */
     public void showListEmployees() {
         //TODO: implement
-    	for(Employee)
+    	EmployeeDB edb = new EmployeeDB();
+    	for(Employee e: edb.getEmployees()) {
+    		System.out.println("Name: " + e.getPrename() + "Surname: " + e.getSurname() + "Jobdescription: " + e.getJobDescription() + "Birthdate: " + e.getBirthdate() + "Salary: " + e.getSalary() + "Employmentdate: " + e.getEmploymentDate());
+    	}
     }
 
     /**
